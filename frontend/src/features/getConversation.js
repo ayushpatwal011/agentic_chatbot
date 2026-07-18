@@ -1,0 +1,11 @@
+import { api } from "../utils/axios"
+
+export const getConversation = async () => {
+    try {
+        const {data} = await api.get('/chat/get-conversation')
+        return data
+    } catch (error) {
+        console.error("error in fetching conversation", error)
+        return []
+    }
+} 

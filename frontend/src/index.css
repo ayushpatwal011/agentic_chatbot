@@ -1,0 +1,111 @@
+/* Import Inconsolata & Inter font faces */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+/* Configure custom theme variables in Tailwind v4 */
+@theme {
+  --font-sans: 'Inconsolata', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Inconsolata', 'Inter', system-ui, sans-serif;
+  
+  /* Modern brand accent colors */
+  --color-brand-primary: #10a37f;      /* Sleek OpenAI green */
+  --color-brand-primary-hover: #1a7f64;
+  --color-brand-accent: #ab68ff;       /* Purple highlight */
+}
+
+/* Base resets and defaults */
+html, body {
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #09090b;
+}
+
+/* Reduce default text size scale for mobile screens */
+@media (max-width: 767px) {
+  html {
+    font-size: 13.5px;
+  }
+}
+
+/* Apply Baloo 2 font explicitly for system UI, labels, and small metadata */
+.font-inter {
+  font-family: var(--font-sans);
+}
+
+/* Hide Scrollbar Styles */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Custom Scrollbar Styles */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.2);
+  border-radius: 9999px;
+}
+.dark .scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.15);
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.4);
+}
+
+/* Custom styling for markdown prose overrides */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.prose th, .prose td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(156, 163, 175, 0.15);
+}
+
+/* Custom loading animations */
+@keyframes bounce-custom {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+.animate-bounce-custom {
+  animation: bounce-custom 1.2s infinite ease-in-out;
+}
+
+/* Fade-in for modal / previews */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

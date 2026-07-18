@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docker:up": "docker compose up -d",
+    "dev:gateway": "npm run dev --prefix gateway",
+    "dev:auth": "npm run dev --prefix services/auth",
+    "dev:chat": "npm run dev --prefix services/chat",
+    "dev:agent": "npm run dev --prefix services/agent",
+    "dev": "npm run docker:up && concurrently -n gateway,auth,chat,agent -c blue,green,yellow,magenta \"npm run dev:gateway\" \"npm run dev:auth\" \"npm run dev:chat\" \"npm run dev:agent\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "ioredis": "^5.11.1"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+}
