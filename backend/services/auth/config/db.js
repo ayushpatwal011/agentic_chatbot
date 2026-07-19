@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 export const connetDB = async ()=>{
 	try {
-		await mongoose.connect(process.env.MONGODB_URI)
+		await mongoose.connect(`${process.env.MONGODB_URI}/auth`)
 		console.log('DataBase conneted');
 		
 	} catch (e) {
