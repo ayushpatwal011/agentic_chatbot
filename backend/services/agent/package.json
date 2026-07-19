@@ -22,6 +22,7 @@
     "@langchain/qdrant": "^1.0.3",
     "@langchain/tavily": "^1.2.0",
     "@langchain/textsplitters": "^1.0.1",
+    "langchain": "^1.5.3",
     "axios": "^1.18.1",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
