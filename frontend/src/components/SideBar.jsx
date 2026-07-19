@@ -105,7 +105,7 @@ const SideBar = ({ isOpen, onClose }) => {
       )}
 
       <aside
-        className={`fixed inset-y-0 left-0 z-50 md:relative flex flex-col h-screen md:h-full bg-zinc-50 text-zinc-800 transition-all duration-300 ease-in-out overflow-hidden border-r border-zinc-200/80 ${
+        className={`fixed inset-y-0 left-0 z-50 md:relative flex flex-col h-dvh md:h-full bg-zinc-50 text-zinc-800 transition-all duration-300 ease-in-out overflow-hidden border-r border-zinc-200/80 ${
           isOpen
             ? "w-64 md:w-72 translate-x-0 opacity-100"
             : "w-64 md:w-0 -translate-x-full md:translate-x-0 md:opacity-0 md:pointer-events-none md:border-r-0"
@@ -123,7 +123,7 @@ const SideBar = ({ isOpen, onClose }) => {
             </div>
             <button 
               onClick={onClose}
-              className="p-1.5 rounded-lg text-zinc-455 hover:text-zinc-800 hover:bg-zinc-200/50 cursor-pointer transition-colors duration-150 flex items-center justify-center"
+              className="p-1.5 rounded-lg text-zinc-455 hover:text-zinc-800 50 cursor-pointer transition-colors duration-150 flex items-center justify-center"
               title="Close Sidebar"
             >
               <ArrowFatLineLeftIcon size={24}/>
@@ -294,10 +294,10 @@ const SideBar = ({ isOpen, onClose }) => {
                     </div>
                   )}
                   <div className="flex flex-col min-w-0">
-                    <span className="text-xs font-bold text-zinc-900 truncate leading-tight">
+                    <span className="text-sm md:text-xs font-bold text-zinc-900 truncate leading-tight">
                       {userData?.user?.name}
                     </span>
-                    <span className="text-[9px] text-zinc-450 truncate font-bold">
+                    <span className="text-[11px] md:text-[9px] text-zinc-450 truncate font-bold">
                       {userData?.user?.email}
                     </span>
                   </div>

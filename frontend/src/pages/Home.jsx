@@ -44,7 +44,7 @@ const Home = () => {
   };
 
   return (
-    <div className="h-screen w-screen bg-white overflow-hidden relative flex flex-col transition-colors duration-200">
+    <div className="h-dvh w-screen bg-white overflow-hidden relative flex flex-col transition-colors duration-200">
       
       {/* Floating Toggle Button for Sidebar when closed */}
       {!sidebarOpen && userData && (

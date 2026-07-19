@@ -18,42 +18,42 @@ const Landing = () => {
     {
       no: "01",
       category: "REAL TIME SEARCH",
-      icon: <Globe className="w-4 h-4 text-zinc-900" />,
+      icon: <Globe className="w-6 h-6 text-zinc-900" />,
       title: "Real-Time Web Research",
       description: "Fact-check news, search current events, and pull the latest online documentation effortlessly.",
     },
     {
       no: "02",
       category: "CODING",
-      icon: <Code className="w-4 h-4 text-zinc-900" />,
+      icon: <Code className="w-6 h-6 text-zinc-900" />,
       title: "Interactive Coding Suite",
       description: "Ask programming questions, debug state bugs, and download full sandbox source code instantly via the side-panel drawer.",
     },
     {
       no: "03",
       category: "RAG",
-      icon: <MagnifyingGlassIcon className="w-4 h-4 text-zinc-900" />,
+      icon: <MagnifyingGlassIcon className="w-6 h-6 text-zinc-900" />,
       title: "RAG (Retrieval-Augmented Generation) Research",
       description: "Upload and analyze , extract text or synthesize photorealistic 8k illustrations from scratch.",
     },
     {
       no: "04",
       category: "PPT GENERATION",
-      icon: <Presentation className="w-4 h-4 text-zinc-900" />,
+      icon: <Presentation className="w-6 h-6 text-zinc-900" />,
       title: "PPT Slide Builder",
       description: "Draft comprehensive presentation slides outline and download ready-to-use PPTX decks in seconds.",
     },
     {
       no: "05",
       category: "PDF GENERATION",
-      icon: <FileText className="w-4 h-4 text-zinc-900" />,
+      icon: <FileText className="w-6 h-6 text-zinc-900" />,
       title: "Document & PDF Architect",
       description: "Generate structured study materials, outlines, and detailed reports exported directly to PDF.",
     },
     {
       no: "06",
       category: "IMAGE GENERATION",
-      icon: <Sparkles className="w-4 h-4 text-zinc-900" />,
+      icon: <Sparkles className="w-6 h-6 text-zinc-900" />,
       title: "Image Analyzer & Generator",
       description: "Upload and analyze diagrams, extract text from charts, or synthesize photorealistic 8k illustrations from scratch.",
     },
@@ -79,8 +79,8 @@ const Landing = () => {
               HW
             </div>
             <div className="flex flex-col text-left">
-              <span className="font-black text-zinc-950 text-xs tracking-wider">HomeWork AI</span>
-              <span className="text-[7px] text-zinc-400 font-bold tracking-widest -mt-0.5">WORKSPACE EDITION</span>
+              <span className="font-black text-zinc-955 text-sm md:text-xs tracking-wider">HomeWork AI</span>
+              <span className="text-[9px] md:text-[7px] text-zinc-400 font-bold tracking-widest -mt-0.5">WORKSPACE EDITION</span>
             </div>
           </div>
 
@@ -92,10 +92,10 @@ const Landing = () => {
 
           <button
             onClick={() => navigate("/home")}
-            className="flex items-center gap-1.5 px-4.5 py-2.5 bg-zinc-950 hover:bg-zinc-800 text-white text-[10px] font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.02] cursor-pointer"
+            className="flex items-center gap-2 px-5 py-3 bg-zinc-955 hover:bg-zinc-800 text-white text-sm md:text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.02] cursor-pointer"
           >
             Try It Now
-            <ChevronRight className="w-3.5 h-3.5" />
+            <ChevronRight className="w-5 h-5" />
           </button>
         </div>
       </header>
@@ -109,12 +109,12 @@ const Landing = () => {
           </div>
           <div className="flex flex-col items-start text-left">
             
-            <span className="text-[10px] font-extrabold text-zinc-855 tracking-wider uppercase">Next-generation study assistant</span>
+            <span className="text-base font-extrabold text-zinc-855 tracking-wider uppercase">Next-generation study assistant</span>
           </div>
         </div>
 
         {/* Big Headings */}
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter text-zinc-950 leading-[1.05] mb-8 text-center uppercase">
+        <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[90px] font-black tracking-tighter text-zinc-955 leading-[1.02] mb-8 text-center uppercase">
           Autonomous. <br />
           Multi-agent. <br />
           <span className="bg-gradient-to-r from-red-600 via-zinc-700 to-zinc-900 bg-clip-text text-transparent">
@@ -124,7 +124,7 @@ const Landing = () => {
 
         {/* Minimalist Sub-details */}
         <div className="max-w-xl mx-auto border-t border-b border-zinc-200 py-6 my-8">
-          <p className="text-xs sm:text-sm text-zinc-500 leading-relaxed font-bold tracking-wide">
+          <p className="text-base text-zinc-500 leading-relaxed font-bold tracking-wide">
            A Multi Agent Full Stack learning platfrom, IT support RAG, Image , PPT , PDF , Code Generation, Code Execution, and much more, 
           </p>
         </div>
@@ -133,14 +133,14 @@ const Landing = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={() => navigate("/home")}
-            className="w-full sm:w-auto flex items-center justify-center gap-2.5 px-7 py-4 bg-zinc-950 hover:bg-zinc-900 text-white text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] cursor-pointer shadow-md"
+            className="w-full sm:w-auto flex items-center justify-center gap-2.5 px-8 py-4.5 bg-zinc-955 hover:bg-zinc-900 text-white text-sm md:text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] cursor-pointer shadow-md"
           >
             Launch Chat Workspace
-            <ArrowRight className="w-3.5 h-3.5" />
+            <ArrowRight className="w-5 h-5" />
           </button>
           <a
             href="#features"
-            className="w-full sm:w-auto flex items-center justify-center gap-1.5 px-7 py-4 bg-white hover:bg-zinc-50 border border-zinc-200 text-zinc-800 text-xs font-bold uppercase tracking-widest transition-all duration-200 cursor-pointer"
+            className="w-full sm:w-auto flex items-center justify-center gap-1.5 px-8 py-4.5 bg-white hover:bg-zinc-50 border border-zinc-200 text-zinc-800 text-sm md:text-xs font-bold uppercase tracking-widest transition-all duration-200 cursor-pointer"
           >
             Explore Features
           </a>
@@ -153,12 +153,12 @@ const Landing = () => {
           
           <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-zinc-200 pb-10 mb-16 text-left">
             <div className="space-y-2">
-              <span className="text-[10px] font-extrabold text-red-500 tracking-widest block uppercase">Agent Functions & Ecosystem</span>
-              <h2 className="text-2xl sm:text-4xl font-black text-zinc-955 tracking-tight">
+              <span className="text-xs md:text-[10px] font-extrabold text-red-500 tracking-widest block uppercase">Agent Functions & Ecosystem</span>
+              <h2 className="text-3xl sm:text-5xl md:text-6xl font-black text-zinc-955 tracking-tight">
                 Specialized Agents.
               </h2>
             </div>
-            <p className="text-xs text-zinc-500 max-w-sm font-semibold leading-relaxed mt-4 md:mt-0">
+            <p className="text-base text-zinc-500 max-w-sm font-semibold leading-relaxed mt-4 md:mt-0">
               MICROSERVICE BACKEND ARCHITECTURE|
             </p>
           </div>
@@ -173,27 +173,27 @@ const Landing = () => {
                 <div>
                   <div className="flex items-center justify-between mb-6">
                     <span className="font-mono text-zinc-300 text-xs tracking-widest">{feature.no}</span>
-                    <span className="text-[9px] font-extrabold text-zinc-400 border border-zinc-200 px-2 py-0.5 rounded-none uppercase tracking-widest">{feature.category}</span>
+                    <span className="text-[11px] md:text-[9px] font-extrabold text-zinc-400 border border-zinc-200 px-2 py-0.5 rounded-none uppercase tracking-widest">{feature.category}</span>
                   </div>
                   
                   <div className="flex items-center gap-2 mb-3">
-                    <div className="p-1.5 border border-zinc-900/10 rounded-none bg-zinc-100/50 flex items-center justify-center">
+                    <div className="p-2.5 border border-zinc-900/10 rounded-none bg-zinc-100/50 flex items-center justify-center">
                       {feature.icon}
                     </div>
-                    <h3 className="text-sm font-black text-zinc-900 uppercase tracking-tight">
+                    <h3 className="text-base md:text-sm font-black text-zinc-900 uppercase tracking-tight">
                       {feature.title}
                     </h3>
                   </div>
                   
-                  <p className="text-xs text-zinc-500 font-semibold leading-relaxed">
+                  <p className="text-base text-zinc-500 font-semibold leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
 
                 <div className="pt-4 flex items-center justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                  <span className="text-[9px] font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-1 cursor-pointer" onClick={() => navigate("/home")}>
+                  <span className="text-xs md:text-[9px] font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-1 cursor-pointer" onClick={() => navigate("/home")}>
                     Activate Agent
-                    <ChevronRight className="w-3 h-3" />
+                    <ChevronRight className="w-5 h-5" />
                   </span>
                 </div>
               </div>
@@ -209,17 +209,17 @@ const Landing = () => {
           {/* Left Block */}
           <div className="flex-1 p-8 sm:p-12 border-b lg:border-b-0 lg:border-r border-zinc-200 text-left space-y-6 flex flex-col justify-between">
             <div className="space-y-4">
-              <span className="text-[10px] font-extrabold text-red-500 tracking-widest block uppercase">UX Concept & Design</span>
-              <h2 className="text-2xl sm:text-3xl font-black text-zinc-950 uppercase tracking-tight leading-tight">
+              <span className="text-xs md:text-[10px] font-extrabold text-red-500 tracking-widest block uppercase">UX Concept & Design</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-zinc-955 uppercase tracking-tight leading-tight">
                 Simplicity in execution, <br />
                 Depth in response.
               </h2>
-              <p className="text-xs text-zinc-500 leading-relaxed font-bold">
+              <p className="text-base text-zinc-500 leading-relaxed font-bold">
                 By pairing clean visual panels with a robust multi-agent backend, we ensure study files are processed, compiled, and visualized neatly.
               </p>
             </div>
 
-            <div className="pt-6 border-t border-zinc-100 space-y-3.5 text-xs font-bold text-zinc-700">
+            <div className="pt-6 border-t border-zinc-100 space-y-3.5 text-base font-bold text-zinc-700">
               <div className="flex items-center gap-3">
                 <span className="w-1.5 h-1.5 bg-zinc-900 rounded-none" />
                 <span>Side-by-side interactive code sandbox</span>
@@ -236,10 +236,10 @@ const Landing = () => {
 
             <button
               onClick={() => navigate("/home")}
-              className="mt-8 self-start flex items-center gap-2 px-6 py-3 bg-zinc-950 hover:bg-zinc-800 text-white text-[10px] font-bold uppercase tracking-widest transition-all duration-300"
+              className="mt-8 self-start flex items-center gap-2 px-7 py-4 bg-zinc-955 hover:bg-zinc-800 text-white text-sm md:text-xs font-bold uppercase tracking-widest transition-all duration-300"
             >
               Get Started
-              <ArrowRight className="w-3.5 h-3.5" />
+              <ArrowRight className="w-5 h-5" />
             </button>
           </div>
 
@@ -249,32 +249,32 @@ const Landing = () => {
               {/* Fake Window header */}
               <div className="flex items-center justify-between pb-3 border-b border-zinc-200 mb-4">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-none border border-zinc-900 bg-zinc-950" />
-                  <span className="text-[10px] font-black uppercase tracking-widest text-zinc-900">Workspace / HW AI</span>
+                  <div className="w-3 h-3 rounded-none border border-zinc-900 bg-zinc-955" />
+                  <span className="text-xs md:text-[10px] font-black uppercase tracking-widest text-zinc-900">Workspace / HW AI</span>
                 </div>
-                <span className="text-[8px] font-bold text-zinc-400 bg-zinc-100 px-1.5 py-0.5">AGENT: CODING</span>
+                <span className="text-[10px] md:text-[8px] font-bold text-zinc-400 bg-zinc-100 px-1.5 py-0.5">AGENT: CODING</span>
               </div>
 
               {/* Fake message rows */}
-              <div className="space-y-4 font-inter text-[10.5px]">
+              <div className="space-y-4 font-inter text-xs md:text-[10.5px]">
                 <div className="flex flex-col gap-1">
-                  <span className="text-[8px] font-bold text-zinc-400 uppercase tracking-widest">User Request</span>
+                  <span className="text-[10px] md:text-[8px] font-bold text-zinc-400 uppercase tracking-widest">User Request</span>
                   <div className="p-3 bg-zinc-50 border border-zinc-200 text-zinc-700 font-semibold leading-relaxed">
                     Write a clean Code of Liner Search in Python
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-1">
-                  <span className="text-[8px] font-bold text-zinc-400 uppercase tracking-widest">Assistant Response</span>
+                  <span className="text-[10px] md:text-[8px] font-bold text-zinc-400 uppercase tracking-widest">Assistant Response</span>
                   <div className="p-3 border border-zinc-900/10 text-zinc-800 font-semibold leading-relaxed bg-[#FDFDFB]">
                     ⚡ Code generated. View code inside the right panel drawer.
                   </div>
                 </div>
 
                 {/* Fake file button */}
-                <div className="flex items-center justify-between p-2 border border-zinc-900 text-zinc-900 font-mono text-[9px] font-black hover:bg-zinc-900 hover:text-white transition-all cursor-pointer">
+                <div className="flex items-center justify-between p-2 border border-zinc-900 text-zinc-900 font-mono text-xs md:text-[9px] font-black hover:bg-zinc-900 hover:text-white transition-all cursor-pointer">
                   <span>linear_search.py</span>
-                  <span className="text-[8px] font-bold border border-current px-1 py-0.25">READY</span>
+                  <span className="text-[10px] md:text-[8px] font-bold border border-current px-1 py-0.25">READY</span>
                 </div>
               </div>
             </div>
@@ -293,14 +293,14 @@ const Landing = () => {
               </div>
               <span className="font-extrabold text-white text-sm tracking-tight select-none">HomeWork AI</span>
             </div>
-            <p className="text-[10px] leading-relaxed max-w-xs font-semibold text-zinc-900">
+            <p className="text-xs md:text-[10px] leading-relaxed max-w-xs font-semibold text-zinc-900">
               Adapting bleeding-edge AI models into a functional study suite to let you learn, create, and research faster.
             </p>
           </div>
 
           <div>
-            <h4 className="text-zinc-900 text-[10px] font-bold uppercase tracking-widest mb-4">Core Modules</h4>
-            <ul className="space-y-2 text-[10.5px] font-semibold text-zinc-900">
+            <h4 className="text-zinc-900 text-xs md:text-[10px] font-bold uppercase tracking-widest mb-4">Core Modules</h4>
+            <ul className="space-y-2 text-xs md:text-[10.5px] font-semibold text-zinc-900">
               <li><a href="#features" className="hover:text-white transition-colors">Coding Agent</a></li>
               <li><a href="#features" className="hover:text-white transition-colors">Presentation Agent</a></li>
               <li><a href="#features" className="hover:text-white transition-colors">Web Research</a></li>
@@ -309,8 +309,8 @@ const Landing = () => {
           </div>
 
           <div>
-            <h4 className="text-zinc-900 text-[10px] font-bold uppercase tracking-widest mb-4">Ownership</h4>
-            <p className="text-[10px] leading-relaxed font-semibold text-zinc-900">
+            <h4 className="text-zinc-900 text-xs md:text-[10px] font-bold uppercase tracking-widest mb-4">Ownership</h4>
+            <p className="text-xs md:text-[10px] leading-relaxed font-semibold text-zinc-900">
               © {new Date().getFullYear()} HomeWork AI. All rights reserved. <br />
               Structural design layout modeled for premium, high-speed pairing.
             </p>

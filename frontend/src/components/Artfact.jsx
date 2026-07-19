@@ -59,7 +59,7 @@ const Artfact = ({ isOpen, onClose }) => {
       )}
 
       <aside
-        className={`fixed inset-y-0 right-0 z-50 lg:relative flex flex-col h-screen lg:h-full bg-white border-l border-zinc-200 transition-all duration-300 ease-in-out overflow-hidden flex-shrink-0 ${
+        className={`fixed inset-y-0 right-0 z-50 lg:relative flex flex-col h-dvh lg:h-full bg-white border-l border-zinc-200 transition-all duration-300 ease-in-out overflow-hidden flex-shrink-0 ${
           isOpen
             ? "w-80 lg:w-96 translate-x-0 opacity-100"
             : "w-80 lg:w-0 translate-x-full lg:translate-x-0 lg:opacity-0 lg:pointer-events-none lg:border-l-0"

@@ -48,7 +48,7 @@ const ChatInput = ({ inputText, setInputText, loading, setLoading }) => {
       label: "Auto",
       icon: <Zap className="w-3.5 h-3.5" />,
       activeColor:
-        "text-zinc-900 bg-zinc-200/70 border-zinc-300",
+        "text-white bg-blue-600 border-white",
     },
     {
       id: "chat",
@@ -204,9 +204,9 @@ const ChatInput = ({ inputText, setInputText, loading, setLoading }) => {
   };
 
   return (
-    <div className="pt-3 px-3 pb-8 md:pt-5 md:px-5 md:pb-12 bg-white flex-shrink-0">
+    <div className="pt-3 px-3 pb-12 md:pt-5 md:px-5 md:pb-12  flex-shrink-0">
       <div className="max-w-3xl mx-auto">
-        <div className="flex flex-col bg-white border border-zinc-200 rounded-xl p-2.5 focus-within:border-zinc-350 focus-within:shadow-xs transition-all duration-150 relative">
+        <div className="flex flex-col bg-gray-200 border border-black rounded-xl p-2.5 focus-within:border-zinc-350 focus-within:shadow-xs transition-all duration-150 relative">
           {selectedFile && (
             <div className="flex items-center gap-3 p-2 mb-2 bg-white border border-zinc-200 rounded-lg group hover:border-zinc-300 transition-all font-inter">
               <div className="relative flex items-center justify-center w-10 h-10 rounded bg-zinc-100 overflow-hidden border border-zinc-200 flex-shrink-0">
@@ -217,15 +217,15 @@ const ChatInput = ({ inputText, setInputText, loading, setLoading }) => {
                     className="w-full h-full object-cover"
                   />
                 ) : (
-                  <FileText className="w-5 h-5 text-zinc-555" />
+                  <FileText className="w-5 h-5 text-black" />
                 )}
               </div>
 
               <div className="flex-1 min-w-0">
-                <p className="text-xs font-semibold text-zinc-800 truncate">
+                <p className="text-xs font-semibold text-zinc-900 truncate">
                   {selectedFile.name}
                 </p>
-                <p className="text-[10px] text-zinc-450 font-mono mt-0.5">
+                <p className="text-[10px] text-zinc-900 font-mono mt-0.5">
                   {(selectedFile.size / (1024 * 1024)).toFixed(2)} MB
                 </p>
               </div>
@@ -233,7 +233,7 @@ const ChatInput = ({ inputText, setInputText, loading, setLoading }) => {
               <button
                 type="button"
                 onClick={handleRemoveFile}
-                className="p-1 rounded-md text-zinc-400 hover:text-zinc-700 hover:bg-zinc-100 transition-all duration-150 cursor-pointer"
+                className="p-1 rounded-md text-zinc-900 transition-all duration-150 cursor-pointer"
                 title="Remove File"
               >
                 <X className="w-4 h-4" />
@@ -242,7 +242,7 @@ const ChatInput = ({ inputText, setInputText, loading, setLoading }) => {
           )}
 
           {/* Agent selectors */}
-          <div className="flex flex-wrap items-center gap-1 pb-2 mb-2 px-1 border-b border-zinc-200 font-inter">
+          <div className="flex items-center gap-1 pb-2 px-1 border-b border-zinc-200 font-inter overflow-x-auto scrollbar-none flex-nowrap whitespace-nowrap">
             {agents.map((agent) => {
               const isSelected = activeAgent === agent.id;
               return (
@@ -252,7 +252,7 @@ const ChatInput = ({ inputText, setInputText, loading, setLoading }) => {
                     selectedConversation && setActiveAgent(agent.id)
                   }
                   disabled={!selectedConversation}
-                  className={`flex items-center gap-1 px-2.5 py-1 rounded-md text-[10px] font-semibold border transition-all duration-150 ${
+                  className={`flex-shrink-0 flex items-center gap-1 px-2.5 py-1 rounded-md text-[10px] font-semibold border transition-all duration-150 ${
                     !selectedConversation
                       ? "opacity-30 cursor-not-allowed border-transparent text-zinc-400"
                       : isSelected
@@ -276,7 +276,7 @@ const ChatInput = ({ inputText, setInputText, loading, setLoading }) => {
     onKeyDown={handleKeyDown}
     disabled={!selectedConversation || loading}
     placeholder={getPlaceholder()}
-    className="flex-1 bg-transparent border-0 outline-none focus:ring-0 text-black placeholder-zinc-450 text-xs py-2 px-1 max-h-32 resize-none scrollbar-none disabled:cursor-not-allowed font-inter"
+    className="flex-1 bg-transparent border-0 outline-none focus:ring-0 text-black placeholder-black text-md py-2 px-1 max-h-32 resize-none scrollbar-none disabled:cursor-not-allowed font-inter"
   />
 
   <div className="flex items-center gap-1 pb-1">
