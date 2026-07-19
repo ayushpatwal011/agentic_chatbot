@@ -60,27 +60,23 @@ const Landing = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FDFDFB] text-zinc-900 flex flex-col font-inter overflow-x-hidden selection:bg-zinc-950 selection:text-white">
-      {/* Decorative Traditional Grid Background Pattern */}
+    <div className="min-h-screen bg-[#FDFDFB] text-zinc-900 flex flex-col overflow-x-hidden selection:bg-zinc-950 selection:text-white">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#e4e4e0_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e0_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_10%,#000_80%,transparent_100%)] pointer-events-none -z-10" />
 
-      {/* Decorative vertical running text on left margin */}
-      <div className="hidden lg:flex absolute left-8 top-1/4 flex-col items-center gap-4 text-zinc-350 font-bold select-none pointer-events-none tracking-widest [writing-mode:vertical-rl] text-[9px] uppercase">
+      <div className="hidden lg:flex absolute left-8 top-1/4 flex-col items-center gap-4 text-zinc-350 font-bold select-none pointer-events-none tracking-widest [writing-mode:vertical-rl] text-[12px] uppercase">
         <span>HomeWork AI Workspace Toolkit</span>
         <div className="w-[1px] h-32 bg-zinc-200" />
         <span>Study Smart and Create Faster</span>
       </div>
 
-      {/* Navigation Header */}
       <header className="sticky top-0 z-40 bg-[#FDFDFB]/85 backdrop-blur-md border-b border-zinc-200">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate("/")}>
-            <div className="w-8 h-8 rounded-none border-2 border-zinc-900 text-zinc-900 flex items-center justify-center font-extrabold text-sm select-none hover:bg-zinc-900 hover:text-white transition-colors duration-300">
+            <div className="w-10 h-10 rounded-none border-2 border-zinc-900  flex items-center justify-center font-extrabold text-xl select-none bg-zinc-900 text-white transition-colors duration-300">
               HW
             </div>
             <div className="flex flex-col text-left">
-              <span className="font-black text-zinc-955 text-sm md:text-xs tracking-wider">HomeWork AI</span>
-              <span className="text-[9px] md:text-[7px] text-zinc-400 font-bold tracking-widest -mt-0.5">WORKSPACE EDITION</span>
+              <span className="font-black text-zinc-955 text-2xl md:text-xl tracking-wider">HomeWork AI</span>
             </div>
           </div>
 
@@ -92,7 +88,7 @@ const Landing = () => {
 
           <button
             onClick={() => navigate("/home")}
-            className="flex items-center gap-2 px-5 py-3 bg-zinc-955 hover:bg-zinc-800 text-white text-sm md:text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.02] cursor-pointer"
+            className="flex items-center gap-2 px-5 py-3 bg-zinc-800 text-white text-sm md:text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.02] cursor-pointer"
           >
             Try It Now
             <ChevronRight className="w-5 h-5" />
@@ -101,7 +97,7 @@ const Landing = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative pt-16 pb-12 md:pt-28 md:pb-20 max-w-5xl mx-auto px-6 text-center">
+      <section className="relative pt-24 pb-12 md:pt-28 md:pb-20 max-w-5xl mx-auto px-6 text-center">
         {/* Red Accent Stamp Shape */}
         <div className="flex items-center justify-center gap-3 mb-8">
           <div className="w-9 h-9 rounded-full border-2 border-red-500 flex items-center justify-center text-red-500 font-black text-[9px] select-none tracking-tighter rotate-12 scale-95 shadow-inner">
@@ -114,7 +110,7 @@ const Landing = () => {
         </div>
 
         {/* Big Headings */}
-        <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[90px] font-black tracking-tighter text-zinc-955 leading-[1.02] mb-8 text-center uppercase">
+        <h1 className="text-6xl lg:text-[90px] font-black tracking-tighter text-zinc-955 leading-[1.02] mb-8 text-center uppercase">
           Autonomous. <br />
           Multi-agent. <br />
           <span className="bg-gradient-to-r from-red-600 via-zinc-700 to-zinc-900 bg-clip-text text-transparent">
@@ -123,7 +119,7 @@ const Landing = () => {
         </h1>
 
         {/* Minimalist Sub-details */}
-        <div className="max-w-xl mx-auto border-t border-b border-zinc-200 py-6 my-8">
+        <div className="max-w-xl px-4 mx-auto border-t border-b border-zinc-200 py-6 my-8">
           <p className="text-base text-zinc-500 leading-relaxed font-bold tracking-wide">
            A Multi Agent Full Stack learning platfrom, IT support RAG, Image , PPT , PDF , Code Generation, Code Execution, and much more, 
           </p>
@@ -133,14 +129,14 @@ const Landing = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={() => navigate("/home")}
-            className="w-full sm:w-auto flex items-center justify-center gap-2.5 px-8 py-4.5 bg-zinc-955 hover:bg-zinc-900 text-white text-sm md:text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] cursor-pointer shadow-md"
+            className="w-full sm:w-auto flex items-center justify-center gap-2.5 px-8 py-4.5 bg-blue-800 text-white text-md font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] cursor-pointer shadow-md"
           >
             Launch Chat Workspace
             <ArrowRight className="w-5 h-5" />
           </button>
           <a
             href="#features"
-            className="w-full sm:w-auto flex items-center justify-center gap-1.5 px-8 py-4.5 bg-white hover:bg-zinc-50 border border-zinc-200 text-zinc-800 text-sm md:text-xs font-bold uppercase tracking-widest transition-all duration-200 cursor-pointer"
+            className="w-full sm:w-auto flex items-center justify-center gap-1.5 px-8 py-4.5 bg-white hover:bg-zinc-50 border border-zinc-200 text-zinc-800 text-md font-bold uppercase tracking-widest transition-all duration-200 cursor-pointer"
           >
             Explore Features
           </a>
@@ -168,19 +164,19 @@ const Landing = () => {
             {features.map((feature, idx) => (
               <div
                 key={idx}
-                className="group p-8 bg-[#FDFDFB] hover:bg-white border-r border-b border-zinc-200 transition-all duration-300 hover:shadow-inner flex flex-col justify-between text-left min-h-[260px]"
+                className="group p-8 bg-[#FDFDFB] hover:bg-red-200 border-r border-b border-zinc-200 transition-all duration-300 hover:shadow-inner flex flex-col justify-between text-left min-h-[260px]"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-mono text-zinc-300 text-xs tracking-widest">{feature.no}</span>
-                    <span className="text-[11px] md:text-[9px] font-extrabold text-zinc-400 border border-zinc-200 px-2 py-0.5 rounded-none uppercase tracking-widest">{feature.category}</span>
+                    <span className="font-mono text-zinc-700 text-md tracking-widest">{feature.no}</span>
+                    <span className="text-[11px] md:text-[9px] font-extrabold text-zinc-700 border border-zinc-700 px-2 py-0.5 rounded-none uppercase tracking-widest">{feature.category}</span>
                   </div>
                   
                   <div className="flex items-center gap-2 mb-3">
                     <div className="p-2.5 border border-zinc-900/10 rounded-none bg-zinc-100/50 flex items-center justify-center">
                       {feature.icon}
                     </div>
-                    <h3 className="text-base md:text-sm font-black text-zinc-900 uppercase tracking-tight">
+                    <h3 className="text-3xl  font-black text-zinc-900 uppercase  tracking-tight">
                       {feature.title}
                     </h3>
                   </div>
