@@ -54,7 +54,7 @@ const SideBar = ({ isOpen, onClose }) => {
       const data = await signInWithPopup(auth, googleProvider);
       const token = await data.user.getIdToken();
       const { data: resData } = await api.post("/auth/login", { token });
-      dispatch(setUserdata(resData));
+      dispatch(setUserdata({ user: resData }));
     } catch (e) {
       console.log("error in handlelogin ", e);
     }

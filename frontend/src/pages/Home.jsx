@@ -37,7 +37,7 @@ const Home = () => {
     const token = await data.user.getIdToken();
     try {
       const { data } = await api.post("/auth/login", { token });
-      dispatch(setUserdata(data));
+      dispatch(setUserdata({ user: data }));
     } catch (e) {
       console.error("error in handlelogin ", e);
     }
