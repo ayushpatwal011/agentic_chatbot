@@ -9,16 +9,17 @@
     "dev:auth": "npm run dev --prefix services/auth",
     "dev:chat": "npm run dev --prefix services/chat",
     "dev:agent": "npm run dev --prefix services/agent",
-    "dev": "npm run docker:up && concurrently -n gateway,auth,chat,agent -c blue,green,yellow,magenta \"npm run dev:gateway\" \"npm run dev:auth\" \"npm run dev:chat\" \"npm run dev:agent\""
+    "dev": "npm run docker:up && concurrently -n gateway,auth,chat,agent -c blue,green,yellow,magenta \"npm run dev:gateway\" \"npm run dev:auth\" \"npm run dev:chat\" \"npm run dev:agent\"",
+    "start": "concurrently -n gateway,auth,chat,agent -c blue,green,yellow,magenta \"node gateway/index.js\" \"node services/auth/index.js\" \"node services/chat/index.js\" \"node services/agent/index.js\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "concurrently": "^10.0.3",
     "ioredis": "^5.11.1"
   },
   "devDependencies": {
-    "concurrently": "^10.0.3"
   }
 }

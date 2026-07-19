@@ -1,0 +1,13 @@
+node_modules/
+gateway/node_modules/
+services/auth/node_modules/
+services/chat/node_modules/
+services/agent/node_modules/
+.env
+.env*
+serviceAccountKey.json
+**/node_modules/
+**/temp/
+**/.git/
+**/.vscode/
+**/.idea/
