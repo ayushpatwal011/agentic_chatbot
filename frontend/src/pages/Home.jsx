@@ -7,6 +7,7 @@ import { setUserdata } from "../redux/userSlice";
 import SideBar from "../components/SideBar";
 import ChatArea from "../components/ChatArea";
 import Artfact from "../components/Artfact";
+import LoginLoading from "../components/LoginLoading";
 import { Code2Icon, CodeIcon, GraduationCap, PanelLeft, Sparkles } from "lucide-react";
 import { ArrowFatLineRightIcon } from "@phosphor-icons/react";
 
@@ -16,6 +17,8 @@ const Home = () => {
   const dispatch = useDispatch();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [artifactSidebarOpen, setArtifactSidebarOpen] = useState(false);
+
+  const [loginloading, setloginLoading] = useState(false);
 
   useEffect(() => {
     // Open sidebar by default on screens >= 768px (desktop)
@@ -33,15 +36,22 @@ const Home = () => {
   }, [artifacts]);
 
   const googleLogin = async () => {
-    const data = await signInWithPopup(auth, googleProvider);
-    const token = await data.user.getIdToken();
+    setloginLoading(true);
     try {
-      const { data } = await api.post("/auth/login", { token });
-      dispatch(setUserdata({ user: data }));
+      const data = await signInWithPopup(auth, googleProvider);
+      const token = await data.user.getIdToken();
+      const { data: resData } = await api.post("/auth/login", { token });
+      dispatch(setUserdata({ user: resData }));
     } catch (e) {
       console.error("error in handlelogin ", e);
+    } finally {
+      setloginLoading(false);
     }
   };
+
+  if (loginloading) {
+    return <LoginLoading />;
+  }
 
   return (
     <div className="h-dvh w-screen bg-white overflow-hidden relative flex flex-col transition-colors duration-200">
@@ -53,7 +63,7 @@ const Home = () => {
           className="absolute top-2.5 left-2.5 md:top-3.5 md:left-4 z-40 p-1 md:p-1.5 bg-white hover:bg-zinc-100 border border-zinc-200 rounded-lg text-zinc-650 hover:text-zinc-900 shadow-xs cursor-pointer flex items-center justify-center transition-all duration-150"
           title="Open Sidebar"
         >
-          <ArrowFatLineRightIcon className="w-4 h-4 md:w-6 md:h-6" size={20} />
+          <ArrowFatLineRightIcon className="w-8 h-8 md:w-10 md:h-10" size={28} />
         </button>
       )}
 
@@ -64,7 +74,7 @@ const Home = () => {
           className="absolute top-2.5 right-2.5 md:top-3.5 md:right-4 z-40 p-1 md:p-1.5 bg-white hover:bg-zinc-100 border border-zinc-200 rounded-lg text-zinc-650 hover:text-zinc-900 shadow-xs cursor-pointer flex items-center justify-center transition-all duration-150"
           title="Open Artifacts Panel"
         >
-          <Code2Icon className="w-4 h-4 md:w-6 md:h-6" />
+          <Code2Icon className="w-8 h-8 md:w-10 md:h-10" />
         </button>
       )}
 

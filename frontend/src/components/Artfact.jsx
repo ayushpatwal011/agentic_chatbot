@@ -70,10 +70,10 @@ const Artfact = ({ isOpen, onClose }) => {
           <div className="flex items-center gap-2 min-w-0 flex-1">
             <Sparkles className="w-4 h-4 text-zinc-550 flex-shrink-0" />
             <div className="min-w-0 flex flex-col">
-              <h3 className="text-xs font-bold text-zinc-900 truncate" title={activeArtifact?.title || "Assets Panel"}>
+              <h3 className="text-sm md:text-xs font-bold text-zinc-900 truncate" title={activeArtifact?.title || "Assets Panel"}>
                 {activeArtifact?.title || "Assets Panel"}
               </h3>
-              <span className="text-[9px] text-zinc-450 font-bold">
+              <span className="text-xs md:text-[9px] text-zinc-450 font-bold">
                 {hasFiles ? `${activeArtifact.files.length} files` : "No active project"}
               </span>
             </div>
@@ -97,7 +97,7 @@ const Artfact = ({ isOpen, onClose }) => {
           ) : (
             <div className="flex-1 flex flex-col min-h-0 text-left">
               {/* File list header */}
-              <div className="text-[10px] font-bold text-zinc-450 uppercase tracking-wider mb-2 select-none">
+              <div className="text-xs md:text-[10px] font-bold text-zinc-450 uppercase tracking-wider mb-2 select-none">
                 Project Files
               </div>
               
@@ -107,7 +107,7 @@ const Artfact = ({ isOpen, onClose }) => {
                   <button
                     key={idx}
                     onClick={() => setSelectedFileIndex(idx)}
-                    className={`py-1.5 px-3 text-[10px] font-bold rounded border transition-all cursor-pointer ${
+                    className={`py-1.5 px-3 text-sm md:text-[10px] font-bold rounded border transition-all cursor-pointer ${
                       fileIndex === idx
                         ? "bg-zinc-900 text-white border-zinc-900 shadow-xs"
                         : "bg-white text-zinc-650 border-zinc-200 hover:bg-zinc-100 hover:text-zinc-800"
@@ -123,12 +123,12 @@ const Artfact = ({ isOpen, onClose }) => {
                 <div className="flex-1 flex flex-col border border-zinc-200 rounded-lg overflow-hidden bg-white min-h-0 relative shadow-sm">
                   {/* Toolbar Header */}
                   <div className="flex justify-between items-center px-3 h-8.5 bg-zinc-100 border-b border-zinc-200/80 flex-shrink-0">
-                    <span className="text-[10px] font-mono text-zinc-650 font-bold truncate pr-3">
+                    <span className="text-xs md:text-[10px] font-mono text-zinc-650 font-bold truncate pr-3">
                       {selectedFile.name}
                     </span>
                     <button
                       onClick={() => handleCopy(selectedFile.content)}
-                      className="text-[9px] px-2 py-0.5 rounded border border-zinc-200 text-zinc-500 hover:text-zinc-800 hover:bg-zinc-200/50 flex items-center gap-1 cursor-pointer transition-colors font-bold"
+                      className="text-xs md:text-[9px] px-2 py-0.5 rounded border border-zinc-200 text-zinc-500 hover:text-zinc-800 hover:bg-zinc-200/50 flex items-center gap-1 cursor-pointer transition-colors font-bold"
                     >
                       {copied ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
                       {copied ? "Copied" : "Copy"}
@@ -146,7 +146,7 @@ const Artfact = ({ isOpen, onClose }) => {
                         minimap: { enabled: false },
                         wordWrap: "on",
                         lineNumbers: "on",
-                        fontSize: 11,
+                        fontSize: window.innerWidth < 768 ? 14 : 11,
                         scrollBeyondLastLine: false,
                         automaticLayout: true,
                         readOnly: true,
@@ -155,7 +155,7 @@ const Artfact = ({ isOpen, onClose }) => {
                   </div>
                 </div>
               ) : (
-                <div className="flex-1 flex items-center justify-center border border-dashed border-zinc-200 rounded-lg text-zinc-450 text-xs bg-zinc-50 font-bold">
+                <div className="flex-1 flex items-center justify-center border border-dashed border-zinc-200 rounded-lg text-zinc-450 text-sm md:text-xs bg-zinc-50 font-bold">
                   File content is empty or unavailable
                 </div>
               )}

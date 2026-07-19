@@ -134,7 +134,7 @@ const SideBar = ({ isOpen, onClose }) => {
           <div className="px-4 pt-4 pb-2 font-inter">
             <button
               onClick={handleConversation}
-              className="w-full flex items-center justify-between bg-white hover:bg-zinc-100 border border-zinc-200 text-zinc-800 rounded-lg py-2 px-3 text-xs font-bold transition-all duration-150 cursor-pointer shadow-xs hover:shadow-sm"
+              className="w-full flex items-center justify-between bg-white hover:bg-zinc-100 border border-zinc-200 text-zinc-800 rounded-lg py-2 px-3 text-base md:text-xs font-bold transition-all duration-150 cursor-pointer shadow-xs hover:shadow-sm"
             >
               <span className="flex items-center gap-2">
                 <MessageSquare className="w-4 h-4 text-zinc-555" />
@@ -153,7 +153,7 @@ const SideBar = ({ isOpen, onClose }) => {
                 placeholder="Search chats..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-9 pr-8 py-1.5 bg-white border border-zinc-200 focus:border-zinc-300 focus:outline-none rounded-lg text-xs text-zinc-800 placeholder-zinc-400 font-inter"
+                className="w-full pl-9 pr-8 py-1.5 bg-white border border-zinc-200 focus:border-zinc-300 focus:outline-none rounded-lg text-base md:text-xs text-zinc-800 placeholder-zinc-400 font-inter"
               />
               {searchTerm && (
                 <button
@@ -170,7 +170,7 @@ const SideBar = ({ isOpen, onClose }) => {
           <div className="flex-1 overflow-y-auto px-3 space-y-4 scrollbar-thin">
             <div>
               <div className="px-3 mb-2 flex items-center justify-between font-inter">
-                <span className="text-[10px] font-bold text-zinc-450 uppercase tracking-wider">
+                <span className="text-xs md:text-[10px] font-bold text-zinc-450 uppercase tracking-wider">
                   Recent Chats
                 </span>
                 {filteredConversations.length > 0 && (
@@ -205,7 +205,7 @@ const SideBar = ({ isOpen, onClose }) => {
                             }
                           }
                         }}
-                        className={`group relative flex items-center justify-between w-full pl-3 pr-2 py-2 rounded-lg text-xs font-bold font-inter transition-all duration-150 text-left cursor-pointer border ${
+                        className={`group relative flex items-center justify-between w-full pl-3 pr-2 py-2 rounded-lg text-base md:text-xs font-bold font-inter transition-all duration-150 text-left cursor-pointer border ${
                           isSelected
                             ? "text-zinc-900 bg-zinc-200/60 border-zinc-200 shadow-xs"
                             : "text-zinc-650 border-transparent hover:text-zinc-900 hover:bg-zinc-200/30"
@@ -226,7 +226,7 @@ const SideBar = ({ isOpen, onClose }) => {
                                 if (e.key === "Escape") setEditingId(null);
                               }}
                               onClick={(e) => e.stopPropagation()}
-                              className="bg-white border border-zinc-300 rounded-md px-1.5 py-0.5 text-zinc-900 text-xs focus:outline-none focus:border-zinc-400 w-full"
+                              className="bg-white border border-zinc-300 rounded-md px-1.5 py-0.5 text-zinc-900 text-base md:text-xs focus:outline-none focus:border-zinc-400 w-full"
                               autoFocus
                             />
                           ) : (

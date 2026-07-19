@@ -46,10 +46,10 @@ const MessageList = ({ onSuggestionClick, loading }) => {
           HW
         </div>
 
-        <p className="text-sm font-bold uppercase tracking-wider mb-1">
+        <p className="text-base md:text-sm font-bold uppercase tracking-wider mb-1">
           Select a Conversation
         </p>
-        <p className="text-xs text-zinc-900 max-w-xs leading-normal font-medium ">
+        <p className="text-sm md:text-xs text-zinc-900 max-w-xs leading-normal font-medium ">
           Pick an existing chat from the sidebar or click "New Chat" to start a
           fresh workspace.
         </p>
@@ -136,48 +136,48 @@ const MessageList = ({ onSuggestionClick, loading }) => {
                 )}
 
                 <div
-                  className={`rounded-2xl px-4 py-2.5 text-sm leading-relaxed font-inter transition-colors duration-150 ${
+                  className={`rounded-2xl px-4 py-2.5 text-lg md:text-sm leading-relaxed font-inter transition-colors duration-150 ${
                     isUser
                       ? " text-black border border-zinc-800 font-bold"
                       : " text-black border border-zinc-800"
                   }`}
                 >
-                  <div className="prose max-w-none text-black text-sm">
+                  <div className="prose max-w-none text-black text-lg md:text-sm">
                     <Markdown
                       remarkPlugins={[remarkGfm]}
                       components={{
                         h1: ({ children }) => (
-                          <h1 className="text-lg font-bold font-display mt-5 mb-2.5 text-black flex items-center gap-2 border-b border-zinc-200 pb-1">
+                          <h1 className="text-xl md:text-lg font-bold font-display mt-5 mb-2.5 text-black flex items-center gap-2 border-b border-zinc-200 pb-1">
                             {children}
                           </h1>
                         ),
                         h2: ({ children }) => (
-                          <h2 className="text-base font-bold font-display mt-4 mb-2 text-black">
+                          <h2 className="text-lg md:text-base font-bold font-display mt-4 mb-2 text-black">
                             {children}
                           </h2>
                         ),
                         h3: ({ children }) => (
-                          <h3 className="text-sm font-bold font-display mt-3.5 mb-1.5 text-black">
+                          <h3 className="text-base md:text-sm font-bold font-display mt-3.5 mb-1.5 text-black">
                             {children}
                           </h3>
                         ),
                         p: ({ children }) => (
-                          <p className="mb-3 whitespace-pre-wrap break-words leading-relaxed font-inter text-sm">
+                          <p className="mb-3 whitespace-pre-wrap break-words leading-relaxed font-inter text-lg md:text-sm">
                             {children}
                           </p>
                         ),
                         ul: ({ children }) => (
-                          <ul className="list-disc pl-5 space-y-1 my-3 text-black font-inter text-sm">
+                          <ul className="list-disc pl-5 space-y-1 my-3 text-black font-inter text-lg md:text-sm">
                             {children}
                           </ul>
                         ),
                         ol: ({ children }) => (
-                          <ol className="list-decimal pl-5 space-y-1 my-3 text-black font-inter text-sm">
+                          <ol className="list-decimal pl-5 space-y-1 my-3 text-black font-inter text-lg md:text-sm">
                             {children}
                           </ol>
                         ),
                         li: ({ children }) => (
-                          <li className="mb-0.5 leading-relaxed text-sm">
+                          <li className="mb-0.5 leading-relaxed text-lg md:text-sm">
                             {children}
                           </li>
                         ),

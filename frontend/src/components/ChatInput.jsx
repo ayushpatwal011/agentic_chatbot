@@ -276,7 +276,7 @@ const ChatInput = ({ inputText, setInputText, loading, setLoading }) => {
     onKeyDown={handleKeyDown}
     disabled={!selectedConversation || loading}
     placeholder={getPlaceholder()}
-    className="flex-1 bg-transparent border-0 outline-none focus:ring-0 text-black placeholder-black text-md py-2 px-1 max-h-32 resize-none scrollbar-none disabled:cursor-not-allowed font-inter"
+    className="flex-1 bg-transparent border-0 outline-none focus:ring-0 text-black placeholder-zinc-450 text-base md:text-xs py-2 px-1 max-h-32 resize-none scrollbar-none disabled:cursor-not-allowed font-inter"
   />
 
   <div className="flex items-center gap-1 pb-1">
