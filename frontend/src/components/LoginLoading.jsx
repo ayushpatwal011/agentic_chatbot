@@ -70,32 +70,42 @@ export default function LoginLoading() {
           <div className="absolute inset-0 rounded-full border border-zinc-800" />
           
           {/* Animated gradient ring */}
-          <svg className="absolute inset-0 w-full h-full rotate-[-90deg]">
-            <circle
-              cx="56"
-              cy="56"
-              r="53"
-              className="stroke-zinc-750 fill-none"
-              strokeWidth="2.5"
-            />
-            <motion.circle
-              cx="56"
-              cy="56"
-              r="53"
-              className="stroke-zinc-200 fill-none"
-              strokeWidth="2.5"
-              strokeDasharray="330"
-              initial={{ strokeDashoffset: 330 }}
-              animate={{ 
-                strokeDashoffset: [330, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-          </svg>
+ {/* Animated gradient ring */}
+<svg
+  className="absolute inset-0 w-full h-full"
+  viewBox="0 0 112 112"
+  preserveAspectRatio="xMidYMid meet"
+>
+  <circle
+    cx="56"
+    cy="56"
+    r="53"
+    className="stroke-zinc-750 fill-none"
+    strokeWidth="2.5"
+  />
+  <motion.circle
+    cx="56"
+    cy="56"
+    r="53"
+    className="stroke-zinc-200 fill-none"
+    strokeWidth="2.5"
+    strokeDasharray="330"
+    style={{
+      transformBox: "fill-box",
+      transformOrigin: "center",
+      rotate: "-90deg",
+    }}
+    initial={{ strokeDashoffset: 330 }}
+    animate={{
+      strokeDashoffset: [330, 0],
+    }}
+    transition={{
+      duration: 1.5,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+  />
+</svg>
 
           {/* Central Icon Container with changing glows and borders */}
           <motion.div 
@@ -128,7 +138,7 @@ export default function LoginLoading() {
 
         {/* Sub-label */}
         <p className="text-[11px] font-bold uppercase tracking-widest text-zinc-500 font-sans">
-          Homework AI Workspace
+          Take few moments, Connecting to server...
         </p>
 
         {/* Minimal Steps Progress Bar / Dots */}
